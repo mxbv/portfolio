@@ -145,7 +145,7 @@ template {
   display: none;
 }
 :root {
-  --orange: #ff5e00;
+  --orange: #ff640a;
   --grey: #8e8e8e;
 }
 ::-moz-selection {
@@ -173,6 +173,13 @@ span {
   padding: 30px;
   border-radius: 30px;
   margin-bottom: 40px;
+  background: rgba(68, 68, 68, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(68, 68, 68, 0.21);
+  transition: 0.5s;
   .container-name {
     display: inline-block;
     padding: 2px 10px;
@@ -183,11 +190,15 @@ span {
     border-radius: 10px;
   }
 }
+.container:hover {
+  transform: scale(1.01);
+  transition: 0.7s;
+}
 .body {
   max-width: 60vw;
   margin: 0 auto;
   padding: 20px 0px;
-  background-color: #000000;
+  background-color: #202020;
 }
 .title {
   display: block;
