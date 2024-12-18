@@ -83,7 +83,7 @@ section:hover {
   grid-column-end: 3;
 }
 .third-section {
-  height: 150px;
+  height: 60%;
 }
 span {
   color: #fff;
@@ -151,11 +151,24 @@ footer {
   body {
     min-width: 100%;
   }
+  main {
+    grid-gap: 20px;
+  }
   section {
     width: 95%;
     margin: 0 auto;
-    margin-bottom: 40px;
+    padding-left: 20px;
   }
+  .second-section {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .third-section {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 100%;
+  }
+  
   h1 {
     font-size: 50px;
   }
@@ -167,7 +180,9 @@ footer {
   }
   ul {
     width: 90%;
+    margin: 0;
     margin-top: 20px;
+
     li {
       font-size: 20px;
     }
