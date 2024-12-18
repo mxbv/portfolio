@@ -55,12 +55,17 @@ body {
   padding: 20px 0px;
   background-color: #202020;
 }
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2;
+  grid-gap: 20px;
+}
 section {
   width: 100%;
   border: solid 1px var(--grey);
   padding: 30px;
   border-radius: 30px;
-  margin-bottom: 40px;
   background: rgba(68, 68, 68, 0);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -71,6 +76,14 @@ section {
 }
 section:hover {
   transform: scale(1.01);
+  border-color: rgba(68, 68, 68, 0.481);
+}
+.first-section {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.third-section {
+  height: 150px;
 }
 span {
   color: #fff;
@@ -105,25 +118,30 @@ p {
 }
 a {
   font-size: 22px;
-  text-decoration: none;
-}
-a:hover {
   text-decoration: underline;
   text-decoration-color: var(--orange);
+  transition: 0.4s;
+}
+a:hover {
+  color: var(--grey);
 }
 ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   list-style: none;
-  width: 400px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
   text-align: center;
+  li {
+    margin-right: 20px;
+  }
 }
 footer {
   color: var(--grey);
   text-align: center;
   font-size: 18px;
+  margin-top: 50px;
 }
 .projects-link {
   display: block;
