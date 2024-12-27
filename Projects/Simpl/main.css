@@ -1,69 +1,231 @@
 /* Minimal CSS Reset  */
 html {
-    box-sizing: border-box;
-    font-size: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* End Minimal CSS Reset  */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+* {
+  scrollbar-width: thin;
+}
+body {
+  max-width: 100%;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+.side {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100px;
+  background-color: #141315;
+  height: 100%;
+  z-index: 1000;
+  .side-header {
+    display: block;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    font-family: monospace;
   }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ol,
-  ul {
-    margin: 0;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #201f22;
     padding: 0;
-    font-weight: normal;
+    border-radius: 15px;
+    border: solid 2px #242226;
+    transition: 0.5s;
+    margin: 0 auto;
+    margin-top: 80px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
-  
-  ol,
-  ul {
-    list-style: none;
+  button:hover {
+    background-color: #2a292d;
   }
-  
-  img {
-    max-width: 100%;
-    height: auto;
+  .side-links {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    bottom: 50px;
+    li {
+      width: 80%;
+      height: 50px;
+      text-align: center;
+      margin-top: 20px;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border: solid 1px #1d1d1d;
+        background-color: #201f22;
+        padding: 0px 20px;
+        border-radius: 15px;
+        text-decoration: none;
+        transition: 0.5s;
+        color: #ffffff;
+      }
+      a:hover {
+        background-color: #2a292d;
+      }
+    }
   }
-  /* End Minimal CSS Reset  */
-  ::-webkit-scrollbar {
-    width: 10px;
+}
+.notes {
+  height: 100%;
+  overflow-y: auto;
+  padding: 0px 40px 50px 140px;
+  .note {
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 15px;
+    background: #f8f8f8;
+    padding: 15px;
+    .note-title {
+      display: inline-block;
+      width: 95%;
+      font-size: 24px;
+      border: none;
+      resize: none;
+      padding: 5px;
+      font-family: inherit;
+      box-sizing: border-box;
+      outline: none;
+      line-height: 18px;
+      background: none;
+      color: #2a292a;
+    }
+    .note-text {
+      font-size: 18px;
+      width: 100%;
+      border: none;
+      padding: 5px;
+      font-family: inherit;
+      box-sizing: border-box;
+      outline: none;
+      resize: none;
+      line-height: 20px;
+      background: none;
+      color: #2a292a;
+    }
+    textarea::placeholder {
+      color: #000000;
+      opacity: 1;
+    }
+    .note-delete {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: none;
+      color: #000000;
+      border: none;
+      border-radius: 15px;
+      margin: 0;
+      transition: 0.5s;
+      .note-delete-img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .note-delete:hover {
+      background-color: #efefef;
+      color: #000000;
+    }
+    .note-date {
+      display: inline-block;
+      padding: 5px;
+      color: #4f4f4f;
+      font-size: 14px;
+      font-family: monospace;
+    }
   }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+}
+p {
+  margin-top: 10px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+footer {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  bottom: 10px;
+  right: 10px;
+  background-color: #141315;
+  border-radius: 10px;
+  a {
+    color: #ffffff;
   }
-  * {
-    scrollbar-width: thin;
-  }
-  body {
-    max-width: 100%;
-    height: 100vh;
-    font-family: "Open Sans", sans-serif;
-  }
+}
+@media screen and (max-width: 480px) {
   .side {
     display: flex;
     position: fixed;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    width: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    width: 100%;
     background-color: #141315;
-    height: 100%;
+    height: 100px;
     z-index: 1000;
     .side-header {
       display: block;
       font-weight: 400;
       color: #ffffff;
       text-align: center;
-      margin-top: 20px;
+      margin: 0;
     }
     button {
       display: flex;
@@ -73,11 +235,11 @@ html {
       height: 50px;
       background-color: #201f22;
       padding: 0;
-      border-radius: 15px;
+      border-radius: 100px;
       border: solid 2px #242226;
       transition: 0.5s;
-      margin: 0 auto;
-      margin-top: 80px;
+      margin: 0;
+      align-self: center;
       img {
         width: 30px;
         height: 30px;
@@ -87,49 +249,22 @@ html {
       background-color: #2a292d;
     }
     .side-links {
-      display: flex;
-      width: 100%;
-      position: absolute;
-      flex-direction: column;
-      align-items: center;
-      bottom: 50px;
-      li {
-        width: 80%;
-        height: 50px;
-        text-align: center;
-        margin-top: 20px;
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100%;
-          border: solid 1px #1d1d1d;
-          background-color: #201f22;
-          padding: 0px 20px;
-          border-radius: 15px;
-          text-decoration: none;
-          transition: 0.5s;
-          color: #ffffff;
-        }
-        a:hover {
-          background-color: #2a292d;
-        }
-      }
+      display: none;
     }
   }
   .notes {
     height: 100%;
     overflow-y: auto;
-    padding: 0px 40px 50px 140px;
+    padding: 0;
+    padding-top: 100px;
     .note {
-      width: 100%;
-      margin-top: 50px;
-      border-radius: 15px;
-      background: #f8f8f8;
-      padding: 15px;
+      width: 95%;
+      padding: 20px 10px;
+      margin: 0 auto;
+      margin-top: 30px;
       .note-title {
         display: inline-block;
-        width: 95%;
+        width: 80%;
         font-size: 24px;
         border: none;
         resize: none;
@@ -138,145 +273,11 @@ html {
         box-sizing: border-box;
         outline: none;
         line-height: 18px;
-        background: none;
-        color: #2a292a;
-      }
-      .note-text {
-        font-size: 18px;
-        width: 100%;
-        border: none;
-        padding: 5px;
-        font-family: inherit;
-        box-sizing: border-box;
-        outline: none;
-        resize: none;
-        line-height: 20px;
-        background: none;
-        color: #2a292a;
-      }
-      textarea::placeholder {
-        color: #000000;
-        opacity: 1;
-      }
-      .note-delete {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        background: none;
-        color: #000000;
-        border: none;
-        border-radius: 15px;
-        margin: 0;
-        transition: 0.5s;
-        .note-delete-img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-      .note-delete:hover {
-        background-color: #efefef;
-        color: #000000;
       }
       .note-date {
         display: inline-block;
         padding: 5px;
-        color: #4f4f4f;
-        font-size: 14px;
-        font-family: monospace;
       }
     }
   }
-  p {
-    margin-top: 10px;
-    color: #ffffff;
-    line-height: 1.5;
-  }
-  footer {
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    height: 40px;
-    bottom: 10px;
-    right: 10px;
-    background-color: #141315;
-    border-radius: 10px;
-    a {
-      color: #ffffff;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .side {
-      display: flex;
-      position: fixed;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0px 20px;
-      width: 100%;
-      background-color: #141315;
-      height: 100px;
-      z-index: 1000;
-      .side-header {
-        display: block;
-        font-weight: 400;
-        color: #ffffff;
-        text-align: center;
-        margin: 0;
-      }
-      button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        background-color: #201f22;
-        padding: 0;
-        border-radius: 100px;
-        border: solid 2px #242226;
-        transition: 0.5s;
-        margin: 0;
-        align-self: center;
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-      button:hover {
-        background-color: #2a292d;
-      }
-      .side-links {
-        display: none;
-      }
-    }
-    .notes {
-      height: 100%;
-      overflow-y: auto;
-      padding: 0;
-      padding-top: 100px;
-      .note {
-        width: 95%;
-        padding: 20px 10px;
-        margin: 0 auto;
-        margin-top: 30px;
-        .note-title {
-          display: inline-block;
-          width: 80%;
-          font-size: 24px;
-          border: none;
-          resize: none;
-          padding: 5px;
-          font-family: inherit;
-          box-sizing: border-box;
-          outline: none;
-          line-height: 18px;
-        }
-        .note-date {
-          display: inline-block;
-          padding: 5px;
-        }
-      }
-    }
-  }
-  
+}
