@@ -29,6 +29,26 @@ img {
   max-width: 100%;
   height: auto;
 }
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #141315;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8855e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #141315;
+}
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: #8855e1 #000000; 
+}
 :root {
   --purple: #8855e1;
   --grey: #67676c;
