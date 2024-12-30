@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>rsFeed - RSS articles reader</title>
+  </head>
+  <body>
+    <header>
+      <h1>🗞rsFeed🗞</h1>
+      <h3>
+        A curated list of news sources and articles I occasionally explore.
+      </h3>
+      <div class="header-links">
+        <a href="https://rss2json.com/">This site use rss2json Api</a> /
+        <a href="#">Source code</a>
+      </div>
+    </header>
+    <div class="buttons">
+      <button data-rss="https://techcrunch.com/feed/">Techcrunch</button>
+      <button data-rss="https://www.wired.com/feed/category/science/latest/rss">
+        Wired
+      </button>
+      <button data-rss="https://news.ycombinator.com/rss">Hacker News</button>
+      <button data-rss="https://www.raptitude.com/feed/">Raptitude</button>
+      <button data-rss="https://habr.com/ru/rss/articles/top/weekly/?limit=25">
+        Habr
+      </button>
+      <button data-rss="https://knife.media/rss" class="button-end">
+        Knife
+      </button>
+    </div>
+    <div class="articles"></div>
+    <button class="scrollToTop">⬆</button>
+    <script src="app.js"></script>
+  </body>
+</html>
