@@ -176,6 +176,9 @@ footer {
   text-align: center;
   font-size: 18px;
   margin-top: 50px;
+  a {
+    font-size: 18px;
+  }
 }
 .projects-link {
   width: 100%;

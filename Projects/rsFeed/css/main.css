@@ -104,15 +104,17 @@ header {
     text-align: center;
   }
 }
-.scrollToTop {
+footer {
   display: flex;
   position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 30px;
   right: 20px;
   bottom: 50px;
-  color: #ffffff;
-  font-size: 40px;
-  background: none;
-  border: none;
+  color: #fff;
+  background-color: #191919;
 }
 @media screen and (max-width: 480px) {
   body {
