@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Darker-Grotesque;
+  src: url(../assets/font/Darker_Grotesque/DarkerGrotesque-VariableFont_wght.ttf);
+}
 :root {
   --orange: #ff4814;
   --black: #0a0a0b;
@@ -13,6 +17,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  line-height: 22px;
 }
 
 body,
@@ -51,10 +56,26 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   padding: 20px 0;
-  background: url("../img/bg.webp") center center/cover no-repeat;
+  background: url("../assets/img/bg.webp") center center/cover no-repeat;
   background-color: var(--bg-color);
   font-family: Arial, Helvetica, sans-serif;
   color: var(--black);
+  font-family: Darker-Grotesque;
+}
+main {
+  opacity: 0;
+  animation: fadeIn 0.7s ease-out forwards;
+  transform: translateY(20px);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 main {
   display: grid;
@@ -69,24 +90,24 @@ section {
   padding: 30px;
   background-color: #f7f6e6;
   transition: 0.5s;
-  box-shadow: 10px 10px;
 }
 section:hover {
   transform: scale(1.01);
-  box-shadow: 11px 11px;
+  z-index: 10;
+  box-shadow: 10px 10px;
 }
-.first-section {
+.title-section {
   grid-column: 1 / 2;
   border-radius: 30px 0 0 0;
 }
-.second-section {
-  height: 80%;
+.projects-section {
+  height: 90%;
   border-radius: 0 30px 30px 0;
 }
-.third-section {
+.about-section {
   border-radius: 0 0 30px 30px;
 }
-.fourth-section {
+.nice-section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -94,8 +115,9 @@ section:hover {
   border: none;
   box-shadow: none;
   p {
-    font-family: monospace;
+    font-weight: 600;
     margin-top: 20px;
+    font-size: 22px;
   }
 }
 .fourth-section:hover {
@@ -111,27 +133,32 @@ span {
   border-radius: 10px;
   background: var(--orange);
   font-size: 18px;
+  font-weight: 500;
 }
 h1 {
-  font-weight: bolder;
-  font-size: 50px;
+  font-weight: 900;
+  font-size: 60px;
   margin-top: 20px;
+  line-height: 24px;
 }
 h2 {
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 22px;
+  font-weight: 600;
 }
 h3 {
   display: block;
   font-size: 22px;
   margin: 0;
   margin-top: 20px;
+  font-weight: 500;
 }
 a {
   font-size: 22px;
   transition: 0.4s;
   text-decoration: none;
   color: var(--black);
+  font-weight: 500;
 }
 a:hover {
   color: #aeab90;
@@ -172,7 +199,7 @@ li {
     min-width: 100%;
     height: 100%;
     padding: 10px 0;
-    background: url("../img/bgMobile.webp") center center/cover no-repeat;
+    background: url("../assets/img/bgMobile.webp") center center/cover no-repeat;
     background-color: var(--bg-color);
   }
   main {
@@ -188,9 +215,16 @@ li {
     padding-left: 20px;
     box-shadow: 5px 5px;
   }
+  section:hover {
+    transform: scale(1);
+  }
   .second-section {
     grid-column: 1 / 2;
     height: auto;
+  }
+  .second-section:hover {
+    transform: rotate(0);
+    z-index: 10;
   }
   .third-section {
     grid-column: 1 / 2;
