@@ -3,10 +3,8 @@
   src: url(../assets/font/Darker_Grotesque/DarkerGrotesque-VariableFont_wght.ttf);
 }
 :root {
-  --orange: #ff4814;
   --black: #0a0a0b;
-  --white: #e7e6d9;
-  --bg-color: #fdfadc;
+  --bg-color: #f7f6f5;
 }
 html {
   box-sizing: border-box;
@@ -17,7 +15,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-  line-height: 22px;
+  color: var(--black);
 }
 
 body,
@@ -36,37 +34,21 @@ ul {
   list-style: none;
 }
 
-::-moz-selection {
-  color: var(--black);
-  background: var(--orange);
-}
-select option {
-  color: var(--black);
-  background: var(--orange);
-}
-::selection {
-  color: var(--black);
-  background: var(--orange);
-}
-
 body {
   display: flex;
+  justify-content: center;
   align-items: center;
-  max-width: 60vw;
+  flex-direction: column;
+  max-width: 50vw;
   margin: 0 auto;
-  min-height: 100vh;
-  padding: 20px 0;
-  background: url("../assets/img/bg.webp") center center/cover no-repeat;
+  min-height: 100dvh;
   background-color: var(--bg-color);
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--black);
   font-family: Darker-Grotesque;
-}
-main {
   opacity: 0;
   animation: fadeIn 0.7s ease-out forwards;
   transform: translateY(20px);
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -77,120 +59,52 @@ main {
     transform: translateY(0);
   }
 }
-main {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
-  padding: 20px;
-}
 section {
-  align-items: center;
   width: 100%;
-  border: solid 2px var(--black);
-  padding: 30px;
-  background-color: #f7f6e6;
-  transition: 0.5s;
+  padding: 10px 20px;
 }
-section:hover {
-  transform: scale(1.01);
-  z-index: 10;
-  box-shadow: 10px 10px;
-}
-.title-section {
-  grid-column: 1 / 2;
-  border-radius: 30px 0 0 0;
-}
-.projects-section {
-  height: 90%;
-  border-radius: 0 30px 30px 0;
-}
-.about-section {
-  border-radius: 0 0 30px 30px;
-}
-.nice-section {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background: none;
-  border: none;
-  box-shadow: none;
-  p {
-    font-weight: 600;
-    margin-top: 20px;
-    font-size: 22px;
-  }
-}
-.fourth-section:hover {
-  transform: none;
-  box-shadow: none;
-}
+
 span {
-  color: var(--black);
+  color: #797979;
   display: inline-block;
-  padding: 2px 10px;
   height: 25px;
   text-align: center;
-  border-radius: 10px;
-  background: var(--orange);
   font-size: 18px;
   font-weight: 500;
 }
 h1 {
   font-weight: 900;
   font-size: 60px;
-  margin-top: 20px;
-  line-height: 24px;
 }
 h2 {
-  margin-top: 20px;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
 }
 h3 {
   display: block;
   font-size: 22px;
   margin: 0;
-  margin-top: 20px;
   font-weight: 500;
+
 }
 a {
+  display: inline-block;
   font-size: 22px;
   transition: 0.4s;
-  text-decoration: none;
-  color: var(--black);
   font-weight: 500;
+  background-color: #e8e8e8;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 10px;
 }
 a:hover {
-  color: #aeab90;
+  background-color: #d6d6d6;
 }
-ul {
-  display: flex;
-  justify-content: flex-start;
+.social-links-container {
   width: 100%;
-  height: 60px;
   margin-top: 20px;
 }
-li {
-  margin-right: 20px;
-}
-
-.contact-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  border: solid 2px #1d1d1d;
-  background-color: var(--white);
-  padding: 0px 20px;
-  transition: 0.5s;
-  text-decoration: none;
-}
-.contact-link:hover {
-  background-color: var(--black);
-  color: var(--white);
-}
-
-.projects-link {
+.project-link-container {
   width: 100%;
   margin-top: 20px;
 }
@@ -199,15 +113,6 @@ li {
     min-width: 100%;
     height: 100%;
     padding: 10px 0;
-    background: url("../assets/img/bgMobile.webp") center center/cover no-repeat;
-    background-color: var(--bg-color);
-  }
-  main {
-    grid-gap: 0px;
-    padding: 0;
-    height: 100%;
-    grid-template-columns: repeat(1, 1fr);
-    margin: 0 auto;
   }
   section {
     width: 95%;
@@ -215,25 +120,6 @@ li {
     padding-left: 20px;
     box-shadow: 5px 5px;
   }
-  section:hover {
-    transform: scale(1);
-  }
-  .second-section {
-    grid-column: 1 / 2;
-    height: auto;
-  }
-  .second-section:hover {
-    transform: rotate(0);
-    z-index: 10;
-  }
-  .third-section {
-    grid-column: 1 / 2;
-    height: 100%;
-  }
-  .fourth-section {
-    grid-column: 1 / 2;
-  }
-
   h1 {
     font-size: 50px;
   }
@@ -253,8 +139,5 @@ li {
         font-size: 20px;
       }
     }
-  }
-  footer {
-    font-size: 20px;
   }
 }
