@@ -94,12 +94,25 @@ body {
   padding: 20px 0px;
   overflow-y: auto;
   z-index: 1000;
+  border-right: solid 1px #262628;
 }
-img {
+.menu-logo-img {
   display: block;
   width: 160px;
-  height: 35px;
+  height: 60px;
   margin: 0 auto;
+}
+.mobile-header-burger {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+}
+.mobile-header-logo {
+  display: block;
+  width: 110px;
+  height: 35px;
+  margin: 0 ;
+  margin-left: 10px;
 }
 .divider {
   width: 100%;

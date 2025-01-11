@@ -5,69 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" href="icon/favicon.png" type="image/x-icon" />
-    <title>Stream - your news streams</title>
+    <title>Stream — one flow of news</title>
   </head>
   <body>
     <div class="overlay"></div>
     <header class="mobile-header">
       <button class="menu-toggle" aria-label="Open Menu">
-        <svg
-          rpl=""
-          fill="currentColor"
-          height="20"
-          icon-name="menu-outline"
-          viewBox="0 0 20 20"
-          width="20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M19 10.625H1v-1.25h18v1.25Zm0-7.875H1V4h18V2.75ZM19 16H1v1.25h18V16Z"
-          ></path>
-        </svg>
+        <img
+          src="icon/burger-menu.svg"
+          alt="Menu icon"
+          class="mobile-header-burger"
+        />
       </button>
-      <img src="icon/logo.svg" alt="Logo" />
+      <img src="icon/logo.svg" alt="Logo" class="mobile-header-logo" />
     </header>
     <section class="menu">
-      <div class="menu-logo">
-        <img src="icon/logo.svg" alt="Logo" />
-      </div>
+      <img src="icon/logo.svg" alt="Logo" class="menu-logo-img" />
       <div class="buttons">
         <h4>Streams</h4>
-        <button data-rss="https://techcrunch.com/feed/">Techcrunch</button>
+        <button class="rss-button" data-rss="https://techcrunch.com/feed/">
+          Techcrunch
+        </button>
         <div class="divider"></div>
         <button
+          class="rss-button"
           data-rss="https://www.wired.com/feed/category/science/latest/rss"
         >
           Wired
         </button>
         <div class="divider"></div>
-        <button data-rss="https://www.theverge.com/rss/index.xml">
+        <button
+          class="rss-button"
+          data-rss="https://www.theverge.com/rss/index.xml"
+        >
           The Verge
         </button>
         <div class="divider"></div>
-        <button data-rss="https://feeds.arstechnica.com/arstechnica/index">
+        <button
+          class="rss-button"
+          data-rss="https://feeds.arstechnica.com/arstechnica/index"
+        >
           ArsTechnica
         </button>
         <div class="divider"></div>
-        <button data-rss="https://news.ycombinator.com/rss">Hacker News</button>
+        <button class="rss-button" data-rss="https://news.ycombinator.com/rss">
+          Hacker News
+        </button>
         <div class="divider"></div>
-        <button data-rss="https://www.raptitude.com/feed/">Raptitude</button>
+        <button class="rss-button" data-rss="https://www.raptitude.com/feed/">
+          Raptitude
+        </button>
         <div class="divider"></div>
-        <button data-rss="http://rss.sciam.com/ScientificAmerican-Global">
+        <button
+          class="rss-button"
+          data-rss="http://rss.sciam.com/ScientificAmerican-Global"
+        >
           Scientific American
         </button>
         <div class="divider"></div>
-        <button data-rss="https://dou.ua/feed/">DOU</button>
-        <div class="divider"></div>
-        <button data-rss="https://feeds.feedburner.com/itcua">ITC.ua</button>
+        <button class="rss-button" data-rss="https://dou.ua/feed/">DOU</button>
         <div class="divider"></div>
         <button
+          class="rss-button"
+          data-rss="https://feeds.feedburner.com/itcua"
+        >
+          ITC.ua
+        </button>
+        <div class="divider"></div>
+        <button
+          class="rss-button"
           data-rss="https://habr.com/ru/rss/articles/top/weekly/?limit=25"
         >
           Habr
         </button>
         <div class="divider"></div>
-        <button data-rss="https://knife.media/rss" class="button-end">
+        <button
+          class="rss-button"
+          data-rss="https://knife.media/rss"
+          class="button-end"
+        >
           Knife
         </button>
       </div>
