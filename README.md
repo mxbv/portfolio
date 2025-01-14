@@ -1,5 +1,4 @@
-# My Portfolio Page 
-## This is my page for links and projects online
+# This is my page for links and projects online 
 
 I designed my portfolio to be minimalistic, ensuring it uses as few user resources as possible. 
 In a world where the modern web is overloaded with bloated software, I’m inspired by the philosophy of a lightweight internet. 
