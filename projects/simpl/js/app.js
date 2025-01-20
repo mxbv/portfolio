@@ -1,44 +1,60 @@
+const STORAGE_KEY = "notes";
 const notesContainer = document.querySelector(".notes");
 const addButton = document.querySelector(".note-add");
 const exportButton = document.querySelector(".note-export");
-const STORAGE_KEY = "notes";
 
 // Status of notes in memory
 let notesCache = loadNotes();
+let activeNote = null; // Stores a link to an open note
 
-// Function for loading notes from localStorage
+// Loading notes from localStorage
 function loadNotes() {
   const savedNotes = localStorage.getItem(STORAGE_KEY);
   return savedNotes ? JSON.parse(savedNotes) : [];
 }
 
-// Function for saving notes to localStorage
+// Saving notes to localStorage
 function saveNotes(notes) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(notes));
-  notesCache = notes; // Обновляем кэш
+  notesCache = notes; // Cache update
 }
 
-// Function for displaying a note
+// Function for creating a note item
 function createNoteElement(noteData) {
   const note = document.createElement("div");
   note.className = "note";
+
+  // Note markup
   note.innerHTML = `
-  <div class="note-title-container">
-    <textarea placeholder="Title" class="note-title" maxlength="50">${
-      noteData.title || ""
-    }</textarea>
-    <button class="note-delete" title="Delete"><img src="icon/delete.svg" alt="delete" class="note-delete-img"></button>
-  </div>
-  <textarea placeholder="Write new text here..." class="note-text" maxlength="10000">${
-    noteData.text || ""
-  }</textarea>
-  <span class="note-date">${noteData.date}</span>
+    <div class="note-title-container">
+      <textarea class="note-title" placeholder="Title" maxlength="50">${
+        noteData.title || ""
+      }</textarea>
+      <button class="note-delete" title="Delete">
+        <img src="./assets/icons/delete.svg" alt="delete" class="note-delete-img">
+      </button>
+    </div>
+    <div class="note-text-container">
+      <textarea class="note-text" placeholder="Write new text here..." maxlength="10000">${
+        noteData.text || ""
+      }</textarea>
+    </div>
+    <span class="note-date">${noteData.date}</span>
   `;
 
-  const textArea = note.querySelector(".note-text");
-  textArea.addEventListener("input", () => adjustTextAreaHeight(textArea));
+  // Connect event handlers
+  initializeNoteEventListeners(note, noteData);
 
+  return note;
+}
+
+// Initializing events for a note
+function initializeNoteEventListeners(note, noteData) {
+  const textArea = note.querySelector(".note-text");
   const titleArea = note.querySelector(".note-title");
+  const noteTextContainer = note.querySelector(".note-text-container");
+
+  // Listener to change the text of the note
   [titleArea, textArea].forEach((area) =>
     area.addEventListener("input", () => {
       const updatedNote = notesCache.find((n) => n.id === noteData.id);
@@ -50,22 +66,57 @@ function createNoteElement(noteData) {
     })
   );
 
-  note.querySelector(".note-delete").addEventListener("click", () => {
-    const updatedNotes = notesCache.filter((n) => n.id !== noteData.id);
-    saveNotes(updatedNotes);
-    renderNotes(); // Redraw notes after deletion
+  // Note click handler
+  note.addEventListener("click", (event) => {
+    if (!noteTextContainer.classList.contains("open")) {
+      openNote(noteTextContainer, note);
+    }
   });
 
-  return note;
+  // Deleting a note
+  note.querySelector(".note-delete").addEventListener("click", (event) => {
+    event.stopPropagation();
+    deleteNote(noteData);
+  });
 }
 
-// Automatic textarea height change
+// Opening a note
+function openNote(noteTextContainer, note) {
+  if (activeNote && activeNote !== note) {
+    closeNote(activeNote.querySelector(".note-text-container"));
+  }
+  noteTextContainer.classList.add("open");
+  activeNote = note;
+  adjustTextAreaHeight(noteTextContainer.querySelector(".note-text"));
+}
+
+// Closing a note
+function closeNote(noteTextContainer) {
+  noteTextContainer.classList.remove("open");
+  activeNote = null;
+}
+
+// Automatic height change for a text field
 function adjustTextAreaHeight(textArea) {
-  textArea.style.height = "auto";
-  textArea.style.height = `${textArea.scrollHeight}px`;
+  textArea.style.height = "auto"; // First, we're dropping altitude
+  textArea.style.height = `${textArea.scrollHeight}px`; // Set the desired height
 }
 
-// Function for drawing all notes
+// Closing a note when you click outside of it
+document.addEventListener("click", (event) => {
+  if (activeNote && !activeNote.contains(event.target)) {
+    closeNote(activeNote.querySelector(".note-text-container"));
+  }
+});
+
+// Deleting a note
+function deleteNote(noteData) {
+  const updatedNotes = notesCache.filter((n) => n.id !== noteData.id);
+  saveNotes(updatedNotes);
+  renderNotes();
+}
+
+// Function for rendering all notes
 function renderNotes() {
   notesContainer.innerHTML = "";
   notesCache.forEach((note) => {
@@ -87,9 +138,9 @@ addButton.addEventListener("click", () => {
     )}`,
   };
 
-  notesCache.unshift(newNote); // Adding a new note to the beginning
+  notesCache.unshift(newNote);
   saveNotes(notesCache);
-  renderNotes(); // Redrawing notes
+  renderNotes();
 });
 
 // Exporting notes
@@ -109,7 +160,6 @@ function exportNotes() {
   link.download = "exportNotes.txt";
   link.click();
   URL.revokeObjectURL(link.href);
-  return content;
 }
 
 exportButton.addEventListener("click", exportNotes);
