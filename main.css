@@ -1,6 +1,6 @@
 @font-face {
   font-family: Darker-Grotesque;
-  src: url(../assets/font/Darker_Grotesque/DarkerGrotesque-VariableFont_wght.ttf);
+  src: url(./font/Darker_Grotesque/DarkerGrotesque-VariableFont_wght.ttf);
 }
 :root {
   --black: #0a0a0b;
