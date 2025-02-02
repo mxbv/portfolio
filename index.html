@@ -3,88 +3,233 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="./main.css" />
-    <link rel="icon" href="./icon/favicon.png" />
+    <link rel="icon" href="./favicon.png" />
     <title>Max Baranov - Front-end Developer</title>
   </head>
   <body>
-    <main>
-      <div class="title">
-        <h1>Max Baranov</h1>
-        <h2>Front-end developer from Ukraine</h2>
-        <h3>
-          I love staying active, coding, reading, and reflecting on philosophy
-          :)
-        </h3>
-      </div>
-      <div class="social">
-        <a
-          href="https://github.com/mxbv"
-          target="_blank"
-          rel="noopener"
-          class="social-link"
-          >GitHub</a
-        >
-        <a href="mailto:bv.maks@icloud.com" class="social-link">Mail</a>
-        <a
-          href="https://docs.google.com/document/d/1giPoRSQQ3dP5Cas4jEX6HJN1JxCX1ILQCG0TbpbHdMw/edit?usp=sharing"
-          target="_blank"
-          rel="noopener"
-          class="social-link"
-          >CV</a
-        >
-      </div>
-      <div class="projects">
-        <h3><span>*</span>Some of my pet projects</h3>
-        <div class="projects-grid">
-          <div class="project-grid-item">
-            <a
-              href="projects/simpl/index.html"
-              class="project-link"
-              rel="noopener"
-              >Simpl - light journaling app
-              <img src="icon/link.svg" alt="External link" />
-            </a>
-            <p class="project-info">
-              This app lets you create, read, modify, and delete entries. It
-              uses localStorage with a single key for easy data management. You
-              can also export your journal to a TXT file for backup or sharing.
-            </p>
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>Vanilla JS</span>
-              <span>LocalStorage</span>
-            </div>
-          </div>
-          <div class="project-grid-item">
-            <a
-              href="projects/stream/index.html"
-              class="project-link"
-              rel="noopener"
-              >Stream — one flow of news
-              <img src="icon/link.svg" alt="External link" />
-            </a>
-            <p class="project-info">
-              The app uses the rss2json API to convert RSS feeds into JSON
-              format. Since it’s hosted on GitHub Pages without server-side
-              support, it relies on this third-party API for functionality.
-            </p>
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>Vanilla JS</span>
-              <span>API</span>
-            </div>
-          </div>
-          <div class="project-grid-item">
-            <a href="#" class="project-link">Soon...</a>
-            <p class="project-info">????</p>
-            <div class="project-tags">
-              <span>???</span><span>??</span><span>?</span>
-            </div>
-          </div>
+    <section>
+      <h1>Max Baranov</h1>
+      <h2>Front-end developer from Ukraine</h2>
+      <h3>
+        I love staying active, coding, reading, and reflecting on philosophy :)
+      </h3>
+    </section>
+    <section>
+      <a
+        href="https://github.com/mxbv"
+        target="_blank"
+        rel="noopener"
+        class="social-link"
+        >GitHub</a
+      >
+      <a href="mailto:bv.maks@icloud.com" class="social-link">Mail</a>
+      <a
+        href="https://docs.google.com/document/d/1giPoRSQQ3dP5Cas4jEX6HJN1JxCX1ILQCG0TbpbHdMw/edit?usp=sharing"
+        target="_blank"
+        rel="noopener"
+        class="social-link"
+        >CV</a
+      >
+    </section>
+    <section>
+      <h3>Some of my pet projects</h3>
+      <div class="projects-grid">
+        <div class="project-grid-item">
+          <a href="./simpl/index.html" class="project-link" rel="noopener"
+            >Simpl - minimalist notes app
+            <svg
+              id="export-icon"
+              width="25px"
+              height="25px"
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m11 3h-4c-2.2091 0-4 1.7909-4 4v10c0 2.2091 1.7909 4 4 4h10c2.2091 0 4-1.7909 4-4v-4"
+                stroke="#e8e8e9"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="m12 12 9-9"
+                stroke="#e8e8e9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M21 9V3H15"
+                stroke="#e8e8e9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </a>
+          <p>
+            This app allows you to easily create, read, edit, and delete
+            entries. Built with Vue, it saves your notes locally using IndexedDB
+            for seamless access. You can also export your notes as a TXT file
+            for backup or sharing with others.
+          </p>
+          <span>HTML/CSS</span><span>Vue JS</span>
+          <span>IndexedDB</span>
+        </div>
+        <div class="project-grid-item">
+          <a href="./stream/index.html" class="project-link" rel="noopener"
+            >Stream — one flow of news
+            <svg
+              width="25px"
+              height="25px"
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use href="#export-icon"></use>
+            </svg>
+          </a>
+          <p>
+            The app uses the rss2json API to convert RSS feeds into JSON format.
+            Since it’s hosted on GitHub Pages without server-side support, it
+            relies on this third-party API for functionality.
+          </p>
+          <span>HTML/CSS</span><span>Vanilla JS</span>
+          <span>API</span>
+        </div>
+        <div class="project-grid-item">
+          <a href="#" class="project-link">Soon...</a>
+          <p>????</p>
+          <span>???</span><span>??</span><span>?</span>
         </div>
       </div>
-      <footer>
-        <a href="https://mxbv.github.io/" class="footer-link">mxbv 2025</a>
-      </footer>
-    </main>
+    </section>
+    <style>
+      @font-face {
+        font-family: Montserrat;
+        src: url(./simpl/assets/Montserrat-VariableFont_wght-CiIa1Ne8.ttf);
+      }
+      :root {
+        --white: #e8e8e9;
+        --orange: #ff4814;
+        --bg-color: #17191a;
+      }
+      html {
+        box-sizing: border-box;
+        font-size: 16px;
+        background-color: var(--bg-color);
+        font-family: Montserrat;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+        color: var(--white);
+        height: fit-content;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+      }
+      body {
+        max-width: 50dvw;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      section {
+        height: fit-content;
+        margin-top: 20px;
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 50px;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 10px;
+      }
+      h3 {
+        display: block;
+        font-size: 22px;
+        margin-top: 10px;
+        font-weight: 300;
+        text-wrap-style: pretty;
+      }
+      .social-link {
+        margin-right: 10px;
+        display: inline-block;
+        font-size: 22px;
+        transition: 0.4s;
+        font-weight: 300;
+        background-color: #242526;
+        padding: 20px;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s ease;
+      }
+      .social-link:hover {
+        transform: translateY(-5px);
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        margin-top: 20px;
+        grid-gap: 20px;
+      }
+      .project-grid-item {
+        border: solid 1px #353535;
+        border-radius: 20px;
+      }
+      .project-link {
+        display: flex;
+        align-items: center;
+        background-color: #353535;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-size: 24px;
+        padding: 20px;
+        transition: 0.3s ease;
+        font-weight: 300;
+      }
+      .project-link:hover {
+        background-color: #434343;
+      }
+      svg {
+        margin-left: 10px;
+      }
+      p {
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 300;
+      }
+      span {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 300;
+        color: var(--orange);
+        padding: 0 0 20px 20px;
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          min-width: 95%;
+        }
+        h1 {
+          font-size: 60px;
+          font-weight: 500;
+        }
+        h2 {
+          font-weight: 500;
+          font-size: 26px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+        .project-link {
+          font-size: 24px;
+        }
+      }
+    </style>
   </body>
 </html>
