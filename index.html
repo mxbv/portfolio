@@ -35,6 +35,7 @@
       <h3>Some of my pet projects</h3>
       <a href="./simpl/index.html" rel="noopener"
         >Simpl - minimalist notes app
+        <div></div>
         <p>
           This app lets you easily create, edit, read, and delete notes. Built
           with Vue, it stores your notes locally via IndexedDB for quick access.
@@ -45,6 +46,7 @@
       </a>
       <a href="./stream/index.html" rel="noopener"
         >Stream - one flow of news
+        <div></div>
         <p>
           The app uses the rss2json API to convert RSS feeds into JSON format.
           Since it's hosted on GitHub Pages without server-side support, it
@@ -55,6 +57,7 @@
       </a>
       <a href="#"
         >Soon...
+        <div></div>
         <p>????</p>
         <span>???</span><span>??</span><span>?</span>
       </a>
@@ -104,7 +107,8 @@
       h3,
       p,
       span,
-      a {
+      a,
+      div {
         display: block;
         margin-top: 20px;
       }
@@ -132,6 +136,10 @@
         font-size: 16px;
         color: var(--orange);
         margin-right: 10px;
+      }
+      div {
+        background-color: var(--white);
+        height: 1px;
       }
       @media screen and (max-width: 768px) {
         body {
