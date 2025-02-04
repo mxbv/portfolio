@@ -33,76 +33,31 @@
     </section>
     <section>
       <h3>Some of my pet projects</h3>
-      <div class="projects-grid">
-        <div class="project-grid-item">
-          <a href="./simpl/index.html" class="project-link" rel="noopener"
-            >Simpl - minimalist notes app
-            <svg
-              id="export-icon"
-              width="25px"
-              height="25px"
-              fill="none"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m11 3h-4c-2.2091 0-4 1.7909-4 4v10c0 2.2091 1.7909 4 4 4h10c2.2091 0 4-1.7909 4-4v-4"
-                stroke="#e8e8e9"
-                stroke-linecap="round"
-                stroke-width="2"
-              />
-              <path
-                d="m12 12 9-9"
-                stroke="#e8e8e9"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M21 9V3H15"
-                stroke="#e8e8e9"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </a>
-          <p>
-            This app lets you easily create, edit, read, and delete notes. Built
-            with Vue, it stores your notes locally via IndexedDB for quick
-            access. You can also export them as a TXT file for backup or
-            sharing.
-          </p>
-          <span>HTML/CSS</span><span>Vue JS</span>
-          <span>IndexedDB</span>
-        </div>
-        <div class="project-grid-item">
-          <a href="./stream/index.html" class="project-link" rel="noopener"
-            >Stream - one flow of news
-            <svg
-              width="25px"
-              height="25px"
-              fill="none"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use href="#export-icon"></use>
-            </svg>
-          </a>
-          <p>
-            The app uses the rss2json API to convert RSS feeds into JSON format.
-            Since it’s hosted on GitHub Pages without server-side support, it
-            relies on this third-party API for functionality.
-          </p>
-          <span>HTML/CSS</span><span>Vanilla JS</span>
-          <span>API</span>
-        </div>
-        <div class="project-grid-item">
-          <a href="#" class="project-link">Soon...</a>
-          <p>????</p>
-          <span>???</span><span>??</span><span>?</span>
-        </div>
-      </div>
+      <a href="./simpl/index.html" rel="noopener"
+        >Simpl - minimalist notes app
+        <p>
+          This app lets you easily create, edit, read, and delete notes. Built
+          with Vue, it stores your notes locally via IndexedDB for quick access.
+          You can also export them as a TXT file for backup or sharing.
+        </p>
+        <span>HTML/CSS</span><span>Vue JS</span>
+        <span>IndexedDB</span>
+      </a>
+      <a href="./stream/index.html" rel="noopener"
+        >Stream - one flow of news
+        <p>
+          The app uses the rss2json API to convert RSS feeds into JSON format.
+          Since it's hosted on GitHub Pages without server-side support, it
+          relies on this third-party API for functionality.
+        </p>
+        <span>HTML/CSS</span><span>Vanilla JS</span>
+        <span>API</span>
+      </a>
+      <a href="#"
+        >Soon...
+        <p>????</p>
+        <span>???</span><span>??</span><span>?</span>
+      </a>
     </section>
     <style>
       @font-face {
@@ -114,136 +69,73 @@
         --orange: #ff4814;
         --bg-color: #17191a;
       }
-      html {
-        box-sizing: border-box;
-        font-size: 16px;
-        background-color: var(--bg-color);
-        font-family: Montserrat;
-      }
       *,
       *:before,
       *:after {
-        box-sizing: inherit;
-        color: var(--white);
         height: fit-content;
+        color: var(--white);
         margin: 0;
         padding: 0;
         text-decoration: none;
+        font-family: Montserrat;
+        box-sizing: border-box;
+        font-weight: 300;
+        font-size: 18px;
       }
       body {
         max-width: 50dvw;
         min-height: 100%;
         margin: 0 auto;
         padding: 20px 0;
+        background-color: var(--bg-color);
       }
-      section {
-        height: fit-content;
-        margin-top: 20px;
+      h1,
+      h2 {
+        font-weight: 500;
       }
       h1 {
-        font-weight: 700;
         font-size: 50px;
       }
       h2 {
         font-size: 22px;
-        font-weight: 500;
+      }
+      section,
+      h2,
+      h3,
+      p,
+      span,
+      a {
+        display: block;
         margin-top: 20px;
       }
       h3 {
-        display: block;
-        font-size: 18px;
-        margin-top: 20px;
-        font-weight: 300;
         text-wrap-style: pretty;
+      }
+      a {
+        background-color: #242526;
+        border-radius: 15px;
+        padding: 20px;
+        transition: 0.3s ease;
+      }
+      a:hover {
+        transform: translateY(-5px);
       }
       .social-link {
         display: inline-block;
-        font-size: 18px;
-        transition: 0.4s;
-        font-weight: 300;
-        background-color: #242526;
-        padding: 20px;
-        text-decoration: none;
-        border-radius: 10px;
-        transition: 0.3s ease;
         margin: 20px 10px 20px 0;
       }
-      .social-link:hover {
-        transform: translateY(-5px);
-      }
-      .projects-grid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        margin-top: 20px;
-        grid-gap: 20px;
-      }
-      .project-grid-item {
-        border: solid 1px #353535;
-        border-radius: 20px;
-      }
-      .project-link {
-        display: flex;
-        align-items: center;
-        background-color: #353535;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        font-size: 20px;
-        padding: 20px;
-        transition: 0.3s ease;
-        font-weight: 300;
-      }
-      .project-link:hover {
-        background-color: #434343;
-      }
-      svg {
-        margin-left: 10px;
-      }
       p {
-        padding: 20px;
-        font-size: 18px;
-        font-weight: 300;
         line-height: 1.5;
       }
       span {
         display: inline-block;
         font-size: 16px;
-        font-weight: 300;
         color: var(--orange);
-        padding: 0 0 20px 20px;
+        margin-right: 10px;
       }
       @media screen and (max-width: 768px) {
         body {
           min-width: 95%;
-        }
-        h1 {
-          font-size: 50px;
-          font-weight: 500;
-        }
-        h2 {
-          font-weight: 500;
-          font-size: 23px;
-        }
-        h3 {
-          font-size: 18px;
-        }
-        .social-link {
-          font-size: 18px;
-        }
-        .project-link {
-          font-size: 20px;
-        }
-        p {
-          padding: 20px;
-          font-size: 18px;
-          font-weight: 300;
-        }
-        span {
-          display: inline-block;
-          font-size: 16px;
-          font-weight: 300;
-          color: var(--orange);
-          padding: 0 0 20px 20px;
         }
       }
     </style>
