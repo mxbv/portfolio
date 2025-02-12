@@ -1,7 +1,7 @@
 const articlesContainer = document.querySelector(".articles-container");
 
 // API-key
-const apiKey = "6yov8k1fainunzsw71ghtyqlgaevthu1eleska2w";
+const apiKey = "r8aupp5cj1jskv2w2ykexvrqr7qelwqfv1313wzg";
 
 // RSS download function
 async function loadRSS(rssUrl) {
