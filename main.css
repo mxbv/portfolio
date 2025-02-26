@@ -47,8 +47,6 @@ body {
   background-color: var(--bg-color);
 }
 
-
-
 section {
   display: flex;
   align-items: center;
@@ -62,8 +60,7 @@ section {
   background-color: #1a1a1a;
   background-image: linear-gradient(#e8e8e93a 1px, transparent 1px),
     linear-gradient(90deg, #e8e8e93a 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-attachment: fixed;
+  background-size: 50px 50px;
 }
 
 .logo {
@@ -210,4 +207,3 @@ svg {
     padding: 10px 10%;
   }
 }
-
