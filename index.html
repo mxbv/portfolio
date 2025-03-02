@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Max Baranov - Front-end developer</title>
+  </head>
+  <body>
+    <svg style="display: none">
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        id="link-arrow"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M17 7l-10 10" />
+        <path d="M8 7l9 0l0 9" />
+      </symbol>
+    </svg>
+    <div class="container">
+      <section class="title">
+        <span class="title-span"
+          >#title
+          <div class="available">
+            <div class="light"></div>
+            AVAILABLE FOR JOB
+          </div></span
+        >
+
+        <h1>Max Baranov</h1>
+        <h3>Front-end developer</h3>
+        <p class="gray">Let's make the world a better place ✨</p>
+      </section>
+      <section class="about">
+        <span>#about</span>
+        <p>
+          I’m passionate about staying active, reading, and reflecting on
+          philosophy. <br />I also enjoy diving into coding, constantly learning
+          and improving my skills. <br />
+          It’s the balance of physical, mental, and creative pursuits that keeps
+          me motivated.
+        </p>
+      </section>
+      <section class="projects">
+        <span>#projects</span>
+        <div class="project lift-scroll">
+          <img
+            src="./assets/img/simpl.png"
+            alt="Simpl Preview"
+            class="project-img"
+          />
+          <div class="project-link-container">
+            <a href="./simpl/" rel="noopener" class="project-link">
+              Simpl - minimalist notes app
+              <svg width="24" height="24">
+                <use xlink:href="#link-arrow"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="gray">
+            A lightweight note-taking app built with <span>Vue.js</span>. It
+            stores your notes locally using <span>IndexedDB</span> for quick
+            access, and you can export them as TXT files for backup or sharing.
+          </p>
+        </div>
+        <div class="divider"></div>
+        <div class="project lift-scroll">
+          <img
+            src="./assets/img/stream.png"
+            alt="Stream Preview"
+            class="project-img"
+          />
+          <div class="project-link-container">
+            <a href="./stream/index.html" rel="noopener" class="project-link"
+              >Stream - one flow of news
+              <svg width="24" height="24">
+                <use xlink:href="#link-arrow"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="gray">
+            This app converts RSS feeds into JSON format using the
+            <span>rss2json API</span>. Since it’s hosted on GitHub Pages without
+            server-side support, it relies on this third-party API for
+            functionality.
+          </p>
+        </div>
+        <div class="divider"></div>
+        <div class="project lift-scroll">
+          <img
+            src="./assets/img/moviex.png"
+            alt="MovieX Preview"
+            class="project-img"
+          />
+          <div class="project-link-container">
+            <a href="./moviex/" rel="noopener" class="project-link"
+              >MovieX - Millions of movies to discover
+              <svg width="24" height="24">
+                <use xlink:href="#link-arrow"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="gray">
+            MovieX is a <span>Vue.js</span>-based app that allows users to
+            explore trending movies. It features a dedicated page where users
+            can view the top popular films. The app utilizes
+            <span>vee-validate</span> for form validation and
+            <span>axios</span> for making API requests to retrieve data from the
+            database.
+          </p>
+        </div>
+      </section>
+      <section class="contacts">
+        <span>#contacts</span>
+        <div class="contacts-container">
+          <a
+            href="https://github.com/mxbv"
+            target="_blank"
+            rel="noopener"
+            class="contacts-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z"
+              />
+            </svg>
+            GitHub</a
+          >
+
+          <a href="mailto:bv.maks@icloud.com" class="contacts-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z"
+              />
+              <path
+                d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"
+              />
+            </svg>
+            Mail</a
+          >
+
+          <a
+            href="./assets/Max_Baranov_CV_2025.pdf"
+            target="_blank"
+            rel="noopener"
+            class="contacts-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M12 2l.117 .007a1 1 0 0 1 .876 .876l.007 .117v4l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h4l.117 .007a1 1 0 0 1 .876 .876l.007 .117v9a3 3 0 0 1 -2.824 2.995l-.176 .005h-10a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005zm-2.5 8a2.5 2.5 0 0 0 -2.5 2.5v3a2.5 2.5 0 1 0 5 0a1 1 0 0 0 -2 0a.5 .5 0 1 1 -1 0v-3a.5 .5 0 1 1 1 0a1 1 0 0 0 2 0a2.5 2.5 0 0 0 -2.5 -2.5m6.743 .03a1 1 0 0 0 -1.213 .727l-.53 2.119l-.53 -2.119a1 1 0 1 0 -1.94 .486l1.5 6c.252 1.01 1.688 1.01 1.94 0l1.5 -6a1 1 0 0 0 -.727 -1.213m-1.244 -7.031l4.001 4.001h-4z"
+              />
+            </svg>
+            CV.pdf</a
+          >
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    const elements = document.querySelectorAll(".lift-scroll");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+    elements.forEach((el) => observer.observe(el));
+  </script>
+</html>
