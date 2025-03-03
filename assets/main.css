@@ -69,6 +69,7 @@ h1,
 h3,
 h4,
 p,
+img,
 .project-link-container,
 .divider {
   margin-top: 15px;
@@ -111,7 +112,7 @@ h4 {
 }
 img {
   width: 100%;
-  margin-top: 15px;
+  height: 100%;
   transition: 0.5s ease-in-out;
 }
 img:hover {
