@@ -63,10 +63,10 @@
 
 <style scoped>
   .about {
-    padding: 30px 0 40px 0;
+    padding: 20px 0 40px 0;
   }
   .about-container {
-    margin-top: 10px;
+    margin-top: 20px;
     border: solid 1px #262626;
     background-color: #202020;
     backdrop-filter: blur(10px);
