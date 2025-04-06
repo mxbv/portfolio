@@ -105,7 +105,7 @@ svg {
   section {
     width: 95%;
   }
-  h3 {
+  h3, h4 {
     font-size: 1.3rem;
     span {
       font-size: 1.3rem;
