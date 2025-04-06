@@ -63,7 +63,7 @@
 
 <style scoped>
   .about {
-    padding: 20px 0 40px 0;
+    padding: 70px 0 40px 0;
   }
   .about-container {
     margin-top: 20px;
@@ -107,7 +107,7 @@
     margin-top: 50px;
   }
 
-  @media screen and (max-width: 765px) {
+  @media screen and (max-width: 992px) {
     .about-container {
       padding: 1.5rem;
     }

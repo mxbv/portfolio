@@ -91,7 +91,7 @@
   @media screen and (max-width: 765px) {
     .home {
       height: 700px;
-      padding: 10px 0 30px 0;
+      padding: 70px 0 30px 0;
     }
     .links-container {
       display: flex;

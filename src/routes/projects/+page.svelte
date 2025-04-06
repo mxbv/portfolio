@@ -146,9 +146,22 @@
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 765px) {
+  @media screen and (max-width: 992px) {
+    .projects {
+      padding-top: 100px;
+    }
     .projects-grid {
       grid-template-columns: repeat(1, 1fr);
+    }
+    .projects-grid-item {
+      flex-direction: column;
+      .projects-grid-item-img {
+        width: 100%;
+      }
+      .projects-grid-item-text {
+        width: 100%;
+        margin-top: 20px;
+      }
     }
   }
 </style>
