@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import { page } from "$app/stores";
   import { onMount } from "svelte";
   import { goto } from "$app/navigation";
@@ -43,7 +44,7 @@
     <ul class="nav">
       <li class="nav-link">
         <a
-          href="/"
+          href="{base}/"
           class:selected={isActive("/")}
           class="border-top"
           aria-label="home"
@@ -65,7 +66,7 @@
         >
       </li>
       <li class="nav-link">
-        <a href="/about" class:selected={isActive("/about")} aria-label="About"
+        <a href="{base}/about" class:selected={isActive("/about")} aria-label="About"
           ><svg
             width="26"
             height="26"
@@ -92,7 +93,7 @@
       </li>
       <li class="nav-link">
         <a
-          href="/projects"
+          href="{base}/projects"
           class:selected={isActive("/projects")}
           aria-label="Projects"
           ><svg
@@ -134,7 +135,7 @@
     <ul class="dropdown-nav" on:click={toggleMobileNav}>
       <li class="nav-link">
         <a
-          href="/"
+          href="{base}/"
           class:selected={isActive("/")}
           class="border-top"
           aria-label="home"
@@ -156,7 +157,7 @@
         >
       </li>
       <li class="nav-link">
-        <a href="/about" class:selected={isActive("/about")} aria-label="About"
+        <a href="{base}/about" class:selected={isActive("/about")} aria-label="About"
           ><svg
             width="26"
             height="26"
@@ -183,7 +184,7 @@
       </li>
       <li class="nav-link">
         <a
-          href="/projects"
+          href="{base}/projects"
           class:selected={isActive("/projects")}
           aria-label="Projects"
           ><svg

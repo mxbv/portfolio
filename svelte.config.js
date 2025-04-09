@@ -6,7 +6,7 @@ export default {
       fallback: "index.html",
     }),
     paths: {
-      base: "",
+      base: "/portfolio",
     },
   },
 };
