@@ -6,7 +6,7 @@ export default {
       fallback: "index.html",
     }),
     paths: {
-      base: process.env.NODE_ENV === "production" ? "/mxbv.github.io" : "",
+      base: "",
     },
   },
 };
