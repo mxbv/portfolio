@@ -11,15 +11,15 @@
 		"lint": "eslint ."
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.2.5",
-		"@eslint/js": "^9.18.0",
+		"@eslint/compat": "^1.2.8",
+		"@eslint/js": "^9.24.0",
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.16.0",
-		"@sveltejs/vite-plugin-svelte": "^5.0.0",
-		"eslint": "^9.18.0",
-		"eslint-plugin-svelte": "^3.0.0",
+		"@sveltejs/kit": "^2.20.4",
+		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"eslint": "^9.24.0",
+		"eslint-plugin-svelte": "^3.5.1",
 		"globals": "^16.0.0",
-		"svelte": "^5.0.0",
+		"svelte": "^5.25.9",
 		"vite": "^6.2.5"
 	}
 }

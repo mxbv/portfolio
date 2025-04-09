@@ -1,5 +1,4 @@
 <script>
-  export const prerender = true;
   import "../../assets/index.css";
   import SideBarItem from "../../components/SideBarItem.svelte";
   import ArrowIcon from "../../assets/img/home-icons/ArrowIcon.svelte";
